@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ducaysane</title>
+    <title>Ducaysane</title>
     <style>
         *{
             font-family: Arial, sans-serif;
@@ -45,19 +45,20 @@
             font-family: Arial, sans-serif;
             display: grid;
             width: 100%;
-            background-image: url(Feuer1.jpg);
             align-items: center;
-            background-position: center;
-            background-size: cover;
             grid-template-rows: repeat(2, .1fr);
             grid-template-columns: repeat(2, .1fr);
             justify-content: center;
             overflow: hidden;
             margin-top: 14vh;
         }
+        .box{
+            position: absolute;
+            height: 100%;
+        }
         .buttpost{
             margin: 9px;
-            height: 110px;
+            height: 115px;
         }
         .buttpost1{
             height: 100px;
@@ -82,6 +83,21 @@
         background-color: yellow;
         color: blue;
     }
+    .color{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        display: block;
+    }
+    #colorpicker{
+        background-color: blue;
+        color: blue;
+    }
+    .downlink{
+        position: absolute;
+        display: flex;
+        top: 100%;
+    }
     </style>
 </head>
 <body>
@@ -92,6 +108,10 @@
             </button>
             <i>Sureeye</i>
         </div>
+        <div class="color">
+            <h5 style="color: black;background-color: white;">iska badal colorka</h5>
+            <input type="color" id="colorPicker" name="colorPicker">
+        </div>
         <div class="searchbutton">
             <button>
             <img style="height: 30px;" src="search.jpg" alt="">
@@ -101,7 +121,7 @@
     </div>
     <br>
     <div class="box">
-        <a class="buttlinkpost" href="indexbilan.html">
+        <a class="buttlinkpost" href="banee.html">
             <video class="buttpost" src="bilan.mp4"></video>
         </a>
         <a class="buttlinkpost" href="https://sureeye7.blogspot.com/2023/11/sida-hackerka-looga-badbaadiyo-mobilka.html">
@@ -127,6 +147,12 @@
     </div>
 </body>
 </html>
-<style>
-
-</style>
+<script>
+            document.addEventListener("DOMContentLoaded", function() {
+    const colorPicker = document.getElementById("colorPicker");
+    
+    colorPicker.addEventListener("input", function() {
+        document.body.style.backgroundColor = colorPicker.value;
+    });
+});
+</script>
