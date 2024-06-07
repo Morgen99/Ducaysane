@@ -3,156 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ducaysane</title>
+    <link rel="stylesheet" href="chrome.css">
+    <title>Abdiaziz</title>
     <style>
         *{
-            font-family: Arial, sans-serif;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            width: 100%;
-            height: 100%;
-        }
-        .header{
-            position: absolute;
-            margin: 0;
-            display: flex;
-            width: 100%;
-            height: 15vh;
-            background-image: url(Feuer.jpg);
-            color: white;
-            background-position: center;
-            background-size: cover;
-        }
-        .searchbutton{
-            display: flex;
-            justify-content: end;
-            width: 88%;
-            position: absolute;
-            top: 5%;
-        }
-        .minudiv{
-            width: 50%;
-            position: absolute;
-            top: 5%;
-            left: 5%;
-        }
-        .box{
-            font-family: Arial, sans-serif;
-            display: grid;
-            width: 100%;
-            align-items: center;
-            grid-template-rows: repeat(2, .1fr);
-            grid-template-columns: repeat(2, .1fr);
-            justify-content: center;
-            overflow: hidden;
-            margin-top: 14vh;
-        }
-        .box{
-            position: absolute;
-            height: 100%;
-        }
-        .buttpost{
-            margin: 9px;
-            height: 115px;
-        }
-        .buttpost1{
-            height: 100px;
-        }
-        .downlink{
-        background-color: rgb(20, 20, 20);
-        color: white;
-        position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        font-size: 19px;
-        top: auto;
-    }
-    .linkdown{
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 19px;
-    }
-    .linkdown:hover{
-        background-color: yellow;
-        color: blue;
-    }
-    .color{
-        position: absolute;
-        left: 50%;
-        top: 10%;
-        display: block;
-    }
-    #colorpicker{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+html, body{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  position: absolute;
+}
+.header{
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-image: url(isha.jpeg);
+  background-position: center;
+  color: white;
+  height: 10vh;
+
+}
+.minuul{
+  position: relative;
+  left: 5%;
+  top: 9%;
+}
+.h2ul{
+  position: relative;
+  left: 45%;
+  top: 10%;
+}
+nav{
+  height: 50vh;
+  background-image: url(madax.jpeg);
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.box{
+    display: flex;
+    justify-content: center;
+}
+.lesen1{
+  height: 50vh;
+  color: white;
+}
+.onclick{
         background-color: blue;
-        color: blue;
+        color: white;
     }
-    .downlink{
-        position: absolute;
-        display: flex;
-        top: 100%;
+    video{
+        height: 250px;
+        width: 50vh;
+        display: block;
     }
+    video:hover{
+        background-color: black;
+    }
+
+.postcreater{
+    height: 10vh;
+}
+.name, .butt{
+  display: block;
+}
+.name, .email{
+  width: 50vh;
+  height: 7vh;
+  margin: 5px;
+}
+.name, .emaila::placeholder{
+    text-align: center;
+}
+.masseg{
+  height: 25vh;
+  width: 40vh;
+}
+.butt{
+  width: 15vh;
+  padding: 15px;
+}
+.all{
+    display: flex;
+    justify-content: center;
+}
+.down{
+  position: relative;
+  flex-direction: column;
+  top: ;
+  background-color: back;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 19vh;  
+  bottom: 0;
+}
+.ali{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+}
+#cookieConsentBanner {
+  font-family: Arial, sans-serif;
+  }
+
+.coockiediv{
+position: fixed;
+height: 10vh;
+width: 100%;
+}
+.coockiediv:hover{
+background-color: red;
+}
+.video-container {
+    width: auto;
+    max-width: 640px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 40vh;
+    width: 40vh;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
     </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const navigateButton = document.getElementById('navigate-button');
+
+    navigateButton.addEventListener('click', () => {
+        window.location.href = 'indexchat.html'; // Verweist auf die Ziel-HTML-Datei
+    });
+});
+
+</script>
+
 </head>
 <body>
     <div class="header">
-        <div class="minudiv">
+        <ul class="minuul">
             <button>
-                <img style="height: 40px;" src="minuwhite.png" alt="">
+                <img src="minuwhite.png" alt="">
             </button>
-            <i>Sureeye</i>
-        </div>
-        <div class="color">
-            <h5 style="color: black;background-color: white;">iska badal colorka</h5>
-            <input type="color" id="colorPicker" name="colorPicker">
-        </div>
-        <div class="searchbutton">
-            <button>
-            <img style="height: 30px;" src="search.jpg" alt="">
-            </button>
-        </div>
-        <div></div>
+        </ul>
+        <il class="h2ul">
+            <h2>soo dhwawoo</h2>
+
+        </il>
     </div>
     <br>
-    <div class="box">
-        <a class="buttlinkpost" href="indexbilan.html">
-            <video class="buttpost" src="bilan.mp4"></video>
-        </a>
-        <a class="buttlinkpost" href="https://sureeye7.blogspot.com/2023/11/sida-hackerka-looga-badbaadiyo-mobilka.html">
-            <img class="buttpost" src="hackerbloger.png" alt="">
-        </a>
+    <span style="background-color: ; position: absolute; top: 10%;width: 100%;
+     text-align: center; background-color: yellow;">
+        <strong style="color: black;">ku soo dhawoow bogeena</strong>
+    </span>
+    <nav>
+        <div class="box">
+            <div class="lesen1div">
+                <video class="video" controls>
+                    <source src="weiter.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+                <video class="video" controls>
+                    <source src="hindavideo.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+                <video class="video" controls>
+                    <source src="geesigii.mp4" type="video/mp4">
+                </video>
+            
+        </div>
+
+    </nav>
+    <br>
+    <div class="all">
+    <div class="postcreater">
+        <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
+            <div class="alll">
+              <input type="hidden" name="access_key" value="d63f6ca0-5303-4da8-ab05-6a5c88b7b224">
+          <input class="name" type="name" placeholder="Gali Magaca">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <label for="email"></label>
+      <input class="name" id="email" type="email" placeholder="Gali Emailka">
+      <p id="result"></p>
+          <textarea class="masseg" name="Masseg" placeholder="ihre fedback 
+          Kein schlechtes Gerede">
+      </textarea>
+      <button class="butt" type="submit">Dir</button>
+          </div>
+          </form>
+    </div>
     </div>
     <br>
-    <div class="downlink">
-        <ul class="linkdiv">
-            <a class="linkdown" href="">Nagu soo biir</a>
-
-            <a class="linkdown" href="">guriga</a>
-
-            <a class="linkdown" href="">sida loo bixiyo</a>
-        </ul>
-        <ul class="linkdiv2">
-            <a class="linkdown" href="">wararka</a>
-
-            <a class="linkdown" href="">xayaysiisyada</a>
-
-            <a class="linkdown" href="">iibso</a>
-        </ul>
+    <div style="display: flex;justify-content: center;" class="chtbot">
+        <button class="chatbutt" id="navigate-button" style="height: 50px;
+        width: 50vh;background-color: blue;color: white;">chat bot</button>
     </div>
+    <br>
+    <div class="down">
+        <div class="linkdiv">
+            <a class="ali" href="">Nagu sahabsan</a>
+            <a class="ali" href="">Guriga</a>
+            <a class="ali" href="">Dalabka</a>
+        </div>
+        <div class="linkdiv2">
+            <a class="ali" href="">Xayaysiis</a>
+            <a class="ali" href="">Wararka</a>
+            <a class="ali" href="">Habka lacag bixinta</a>
+        </div>
+        <div class="linkdiv3">
+            <button class="caawi">Caawi</button>
+        </div>
+        <br>
+        <div class="coockiediv" id="cookieConsentBanner"
+        style="display: non; position: fixed; bottom: 0; width: 100%; background:
+         rgb(174, 99, 99); color: black; padding: 10px; text-align: center;">
+         bogaan ma aha public Waxba ma adeegsanayo sida coockies iyo wax lamida
+           <button id="accept-button" class="onclick" onclick="acceptCookies()">aqbalay</button>
+           <button id="reject-button" class="onclick" onclick="rejectCookies()">diiday</button>
+       </div>
 </body>
 </html>
 <script>
-            document.addEventListener("DOMContentLoaded", function() {
-    const colorPicker = document.getElementById("colorPicker");
-    
-    colorPicker.addEventListener("input", function() {
-        document.body.style.backgroundColor = colorPicker.value;
+        document.getElementById("accept-button").addEventListener("click", function() {
+            alert("Waxaad aqabashay Thanks you.");
+            // Hier können Sie den Benutzer zur Hauptseite Ihrer Website weiterleiten
+            window.location.href = ""; // Beispiel-URL
+        });
+
+        document.getElementById("reject-button").addEventListener("click", function() {
+            alert("Waa diiday, sidaas darteed si automatic ah ayaad dacaska u qaadan.");
+            // Hier können Sie den Benutzer zu einer anderen Seite weiterleiten oder das Fenster schließen
+            window.location.href = "https://www.google.com/search?sca_esv=66046235350063f2&rlz=1C1ONGR_deCH1107CH1107&q=fuck+you&udm=2&fbs=AEQNm0A6bwEop21ehxKWq5cj-cHa02QUie7apaStVTrDAEoT1A_pRBhSGXWPGL0_xk71SHEmA3ER_coELYr_dNOnjPDGsq177HcOiKuxptSRD2om0Yv0gVWR-bR-KoCyvgi_IPVE3wzOfFZWtOCGOn79udi8Iknf6MapdjVO0gZ0ox6h6biQq1lO1zeODAGE5wQen2-bx9wH&sa=X&ved=2ahUKEwiHg_GUuMqGAxVYgf0HHSZ-AMgQtKgLegQIDxAB&biw=681&bih=632"; // Beispiel-URL, oder window.close() um das Fenster zu schließen
+        });
+
+        var links = document.querySelectorAll('a.ali');
+
+// Für jedes dieser Elemente einen Event-Listener hinzufügen
+links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Verhindert, dass der Link die Seite verlässt
+        alert('ka raali nonoqo, wali Lama brogramin');
     });
 });
+var button = document.querySelector('button.caawi');
+
+// Einen Event-Listener für das 'button' Element hinzufügen
+if (button) {
+    button.addEventListener('click', function() {
+        alert('tag kor oo fariin ii soo dir si aan kaga jawaabo');
+    });
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll('.video');
+
+    videos.forEach(video => {
+        video.addEventListener('play', function() {
+            videos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+});
+
+</script>
+<style>
+    .chatbutt:hover{
+        backdrop-filter: yellow;
+    }
+    .all{
+        position: relative;
+        height: 90vh;
+        box-sizing: border-box;
+        align-items: center;
+        background-image: url(lambad\ \(1\).jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .postcreater{
+        background-color: rgb(154, 165, 165);
+        height: 55vh;
+    }
+    .coockiediv{
+    }
+</style>
+
+
+<script>
+  const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+const validate = () => {
+  const $result = $('#result');
+  const email = $('#email').val();
+  $result.text('');
+  if(validateEmail(email)){
+    $result.text(email + ', es seht gut aus.');
+    $result.css('color', 'green');
+  } else{
+    $result.text(email + ', noch übrig.');
+    $result.css('color', 'red');
+  }
+  return false;
+}
+$('#email').on('input', validate);
+
+
+function acceptCookies() {
+    setCookie("cookieConsent", "accepted", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function rejectCookies() {
+    setCookie("cookieConsent", "rejected", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
 </script>
