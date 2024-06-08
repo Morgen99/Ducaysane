@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot auf Somali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #chat-container {
+            width: 400px;
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #message-container {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #message-container .message {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #message-container .user-message {
+            background-color: #d1ecf1;
+            align-self: flex-end;
+        }
+
+        #message-container .bot-message {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        #input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #send-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="message-container"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Su'aashaada soo geli...">
+            <button id="send-button">Dir</button>
+        </div>
+    </div>
+    <script>
+        const responses = {
+            'sidee tahay': 'fiican! Sideen ku caawin karaa?',
+            'asc': 'wcs, mahadsanid😍',
+            'magacaa': 'Magacaygu waa Chat-Bot😊.',
+            'nabad galiyo': 'Nabad gelyo🙌',
+            'sidee ii caawin kartaa': 'umal malaynayo inaan ku caawin karo lkn ku nonoq websiteka',
+            'yaa tahay': 'Anigu waxaan ahay chat bot😊',
+            'xagee ka timid': 'Waxaan ka imid Soomaaliya😁🤣',
+            'magacaa': 'Magacaygu waa Chat-Bot.',
+            'sideed u shaqaysaa': 'Waxaan halkaan u joogaa inaan su\'aalahaaga ka jawaabo.',
+            'adeegeed bixisaa': 'Waxaan bixinaa adeegyo kala duwan, oo ay ku jiraan taageero iyo talo bixin.',
+            'ma i caawin kartaa': 'Haa, waxaan halkaan u joogaa inaan ku caawiyo! Fadlan soo gudbi su\'aashaada.',
+            'wakhtigeed shaqaysaa': 'Waqtigayaga shaqada waa Isniin ilaa Jimce, 9 subaxnimo ilaa 5 galabnimo.',
+            'halkee lagaa heli karaa': 'Waxaan nahay online had iyo jeer waa kuu diyaar.',
+            'sideen kula soo xidhidhi karaa': 'Waxaad nala soo xiriiri kartaa email ahaan ama chat-kan.'
+        };
+
+        const synonyms = {
+            'sidee tahay': ['sidee tahay', '', 'xagee joogtaa', 'halkan adaan kula joogaa', 'salaan'],
+            'wie geht es dir': ['wie geht es dir', 'sidee tahay', 'maxaad tahay'],
+            'bye': ['bye', 'nabad gelyo', 'macsalaama', 'macsalaamo']
+        };
+
+        document.getElementById("send-button").addEventListener("click", sendMessage);
+        document.getElementById("message-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const messageInput = document.getElementById("message-input");
+            const message = messageInput.value.trim().toLowerCase();
+
+            if (message === "") return;
+
+            appendMessage(message, "user-message");
+            messageInput.value = "";
+
+            setTimeout(() => {
+                const response = getResponse(message) || "Raali ahoow, su'aashaas jawaabteeda ma aqaan.";
+                appendMessage(response, "bot-message");
+            }, 500);
+        }
+
+        function getResponse(message) {
+            for (const key in synonyms) {
+                if (synonyms[key].includes(message)) {
+                    return responses[key];
+                }
+            }
+            return responses[message];
+        }
+
+        function appendMessage(message, className) {
+            const messageContainer = document.getElementById("message-container");
+            const messageElement = document.createElement("div");
+            messageElement.textContent = message;
+            messageElement.className = `message ${className}`;
+            messageContainer.appendChild(messageElement);
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>
